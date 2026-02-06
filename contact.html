@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="no.png" type="image/x-icon">
+  <title>Contact | Nouvelle Rue</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #ffffff;
+      color: #111;
+    }
+
+    header {
+      color: white;
+      background-color: #333;
+      text-align: center;
+      padding: 60px 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #777;
+      text-transform: uppercase;
+    }
+
+    .contact-container {
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .contact-info h2,
+    .contact-form h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .info-item {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    .info-item span {
+      font-weight: 500;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      font-family: inherit;
+      font-size: 14px;
+    }
+
+    form textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    form button {
+      background-color: #111;
+      color: #fff;
+      padding: 12px 30px;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background-color: #9b9b9b;
+    }
+
+    footer {
+        background-color: #2e2e2e;
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #eee;
+      font-size: 13px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="home.html"><h1>Nouvelle Rue</h1></a>
+    <p>Contact Us</p>
+  </header>
+
+  <section class="contact-container">
+    
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>
+        For inquiries about our collections, collaborations, or customer support,
+        please reach out using the form or contact details below.
+      </p>
+
+      <div class="info-item">
+        <span>Email</span>
+        ingabirechristella2@gmail.com
+      </div>
+
+      <div class="info-item">
+        <span>Phone</span>
+        +250 796 910 102
+      </div>
+
+      <div class="info-item">
+        <span>Location</span>
+        Kigali, Rwanda
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send a Message</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Nouvelle Rue. All Rights Reserved. Designed by  <span style="color:#be1a7f";>Chris</span><span style="color:#a4e43d";>tella</span>
+        </div>
+
+</body>
+</html>

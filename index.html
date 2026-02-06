@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="no.png" type="image/x-icon">
+
+  <title>Nouvelle Rue | Modern Clothing</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #111;
+      scroll-behavior: smooth;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background:rgba(177, 186, 185, 0.253);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #111;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background: #111;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      background: url("https://i.pinimg.com/1200x/9f/31/7c/9f317c42702b28ee11ca54da9239b58b.jpg") center/cover no-repeat;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+    }
+
+    .hero-content {
+      position: relative;
+      color: white;
+      max-width: 800px;
+      animation: fadeUp 1.2s ease;
+    }
+
+    .hero-content h1 {
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 60px;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      color: white;
+      font-size: 16px;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+    }
+
+    .hero-content a {
+      text-decoration: none;
+      border: 1px solid #fff;
+      padding: 14px 36px;
+      color: #fff;
+      font-size: 13px;
+      letter-spacing: 2px;
+      transition: background 0.3s;
+    }
+
+    .hero-content a:hover {
+      background: #fff;
+      color: #111;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 60px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      font-size: 14px;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* COLLECTIONS */
+    .collections {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .collection-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .collection-item img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      transition: transform 0.6s;
+    }
+
+    .collection-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .collection-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .collection-item:hover .collection-overlay {
+      opacity: 1;
+    }
+
+    .collection-overlay h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    /* STORY */
+    .story {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .story img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .story-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .story-text p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .story-text a {
+      text-decoration: none;
+      color: #111;
+      font-size: 13px;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #111;
+    }
+
+    /* CTA */
+    .cta {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .cta a {
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #fff;
+      padding: 14px 36px;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 40px;
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .collections {
+        grid-template-columns: 1fr;
+      }
+      .story {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Nouvelle Rue</div>
+    <ul>
+       <li><a href="home.html">Home</a></li>
+       <li><a href="us.html">About</a></li>
+       <li><a href="shop.html">Shop</a></li>
+       <li><a href="contact.html">contact</a></li>
+       <li><a href="collection.html">Brand</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Modern Elegance</h1>
+      <p>Redefining contemporary fashion with timeless design</p>
+      <a href="shop.html">Explore product</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>Featured Collections</h2>
+      <p>Nouvelle Rue</p>
+    </div>
+
+    <div class="collections">
+      <div class="collection-item">
+        <img src="https://i.pinimg.com/736x/b7/b6/83/b7b6833fa25a06f051752b71bbc07dc2.jpg" />
+        <div class="collection-overlay">
+          <h3>Autumn 2026</h3>
+        </div>
+      </div>
+
+      <div class="collection-item">
+        <img src="https://i.pinimg.com/736x/26/75/63/267563ba04415dfe8640b09ae8b2e0da.jpg" />
+        <div class="collection-overlay">
+          <h3>Essential Wear</h3>
+        </div>
+      </div>
+
+      <div class="collection-item">
+        <img src="https://i.pinimg.com/736x/24/08/03/240803cdc62e63202857e2edee96c949.jpg" />
+        <div class="collection-overlay">
+          <h3>Street Luxe</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="story">
+      <img src="logo.png" alt="Nouvelle Rue">
+      <div class="story-text">
+        <h2>INGABIRE Christella</h2>
+        <p>
+          Nouvelle Rue is inspired by modern streets and timeless tailoring.
+          Each piece is crafted to balance elegance, comfort, and identity.
+        </p>
+        <a href="us.html">Discover Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Wear the Future</h2>
+    <a href="shop.html">Shop Now</a>
+  </section>
+
+  <footer>
+    © 2026 Nouvelle Rue. All Rights Reserved. Designed by Christella
+</footer>
+</body>
+
+</html>

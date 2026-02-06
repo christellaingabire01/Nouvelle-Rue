@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nouvelle Rue | jacket</title>
+<link rel="icon" href="no.png" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Montserrat', Arial, sans-serif;
+}
+
+/* BODY */
+body{
+  background:#fff;
+  color:#111;
+}
+
+/* NAVBAR */
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(177, 186, 185, 0.484);
+  backdrop-filter:blur(8px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 40px;
+  border-bottom:1px solid #eee;
+}
+
+nav h2{
+  font-family:'Playfair Display', serif;
+  letter-spacing:2px;
+  font-size:22px;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
+
+nav ul li a{
+  color:#111;
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  position:relative;
+}
+
+nav ul li a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:1px;
+  background:#111;
+  transition:.3s;
+}
+
+nav ul li a:hover::after{
+  width:100%;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(to right,#dcdbdb,#444);
+  color:#fff;
+  text-align:center;
+  padding:90px 20px;
+}
+
+header h1{
+  font-family:'Playfair Display', serif;
+  font-size:46px;
+  letter-spacing:3px;
+  margin-bottom:12px;
+}
+
+header p{
+  font-size:14px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  opacity:.9;
+}
+
+/* PRODUCTS */
+.products{
+  max-width:1300px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:35px;
+  padding:80px 40px;
+}
+
+/* PRODUCT CARD */
+.card{
+  background:#fff;
+  border-radius:16px;
+  padding:16px;
+  text-align:center;
+  position:relative;
+  box-shadow:0 12px 40px rgba(0,0,0,.12);
+  transition:.4s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 50px rgba(0,0,0,.18);
+}
+
+.card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.card h3{
+  margin:16px 0 6px;
+  font-size:16px;
+  font-weight:600;
+}
+
+.card p{
+  font-size:15px;
+  font-weight:600;
+  color:#222;
+}
+
+/* BUTTON */
+button{
+  margin-top:14px;
+  background:#111;
+  color:#fff;
+  border:none;
+  padding:12px 26px;
+  border-radius:40px;
+  font-size:12px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  background:#333;
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:#ccc;
+  padding:70px 30px;
+}
+
+.footer-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+}
+
+footer h3{
+  color:#fff;
+  margin-bottom:16px;
+  font-size:16px;
+}
+
+footer ul{
+  list-style:none;
+}
+
+footer ul li{
+  margin-bottom:10px;
+}
+
+footer ul li a{
+  color:#ccc;
+  text-decoration:none;
+  font-size:14px;
+}
+
+footer ul li a:hover{
+  color:#fff;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:50px;
+  font-size:13px;
+  color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <h2>Nouvelle Rue</h2>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+       <li><a href="us.html">About</a></li>
+       <li><a href="shop.html">Shop</a></li>
+       <li><a href="contact.html">contact</a></li>
+       <li><a href="collection.html">Brand</a></li>
+  </ul>
+
+</nav>
+
+<!-- HERO -->
+<header>
+  <h1>JACKET COLLECTION</h1>
+  <p>Fashion • Quality • Confidence</p>
+</header>
+
+<!-- PRODUCTS -->
+<div class="products">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SmFja2V0fGVufDB8fDB8fHww">
+    <h3>lacost</h3>
+    <p>15,000 RWF</p>
+    <button onclick="buy('lacost - 15,000 RWF ')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://plus.unsplash.com/premium_photo-1675186049366-64a655f8f537?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8SmFja2V0fGVufDB8fDB8fHww">
+    <h3>lacost</h3>
+    <p>18,000 RWF</p>
+    <button onclick="buy('lacost - 18,000 RWF')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8SmFja2V0fGVufDB8fDB8fHww">
+    <h3>lacost</h3>
+    <p>17,000 RWF</p>
+    <button onclick="buy('lacost - 17,000 RWF')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8SmFja2V0fGVufDB8fDB8fHww">
+    <h3>lacost</h3>
+    <p>10,000 RWF</p>
+    <button onclick="buy('lacost - 22,000 RWF')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1706765779494-2705542ebe74?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8SmFja2V0fGVufDB8fDB8fHww">
+    <h3>lacost</h3>
+    <p>15,000 RWF</p>
+    <button onclick="buy('lacost - 15,000 RWF')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1627637454030-5ddd536e06e5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8SmFja2V0fGVufDB8fDB8fHww">
+    <h3>jampa</h3>
+    <p>30,000 RWF</p>
+    <button onclick="buy('jampa- 30,000 RWF')">Buy Now</button>
+  </div>
+<div class="card">
+    <img src="https://plus.unsplash.com/premium_photo-1671030274122-b6ac34f87b8b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8SmFja2V0fGVufDB8fDB8fHww">
+    <h3>jampa</h3>
+    <p>25,000 RWF</p>
+    <button onclick="buy('jampa - 25,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1557418669-db3f781a58c0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fEphY2tldHxlbnwwfHwwfHx8MA%3D%3D">
+    <h3>jampa</h3>
+    <p>25,000 RWF</p>
+    <button onclick="buy('jampa - 25,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1548883354-94bcfe321cbb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fEphY2tldHxlbnwwfHwwfHx8MA%3D%3D">
+    <h3>jampa</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('jampa - 12,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEphY2tldHxlbnwwfHwwfHx8MA%3D%3D">
+    <h3>School Bag</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1495105787522-5334e3ffa0ef?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fEphY2tldHxlbnwwfHwwfHx8MA%3D%3D">
+    <h3>School Bag</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/1342121693/photo/blue-sport-winter-jacket-isolated-on-white-warm-clothes.webp?a=1&b=1&s=612x612&w=0&k=20&c=-yJRW38eUUsTG1bZ568UYVU95_vZkQtoCbY6wAmyRiA=">
+    <h3>School Bag</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/2187093535/photo/cute-girl-in-warm-clothing-sitting-in-the-forest-during-autumn-day.webp?a=1&b=1&s=612x612&w=0&k=20&c=snkNUjS96ypbNIQ1uJSj3GZGnyOKV8YrsmOMQq599N0=">
+    <h3>lacost</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/516544100/photo/hero-showing-white-t-shirt.webp?a=1&b=1&s=612x612&w=0&k=20&c=47kBPPvuRDZtN51gHUjYWI6rf_fmhubW_O2Zax6y9X8=">
+    <h3>lacost</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1552327359-d86398116072?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fEphY2tldHxlbnwwfHwwfHx8MA%3D%3D">
+    <h3>lacost</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://plus.unsplash.com/premium_photo-1675183713626-81e6de4552e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fEphY2tldHxlbnwwfHwwfHx8MA%3D%3D">
+    <h3>lacost</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1618329918461-51bb072e0ea5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fEphY2tldHxlbnwwfHwwfHx8MA%3D%3D">
+    <h3>lacost</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://images.unsplash.com/photo-1740711152088-88a009e877bb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fEphY2tldHxlbnwwfHwwfHx8MA%3D%3D">
+    <h3>lacost</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://images.unsplash.com/photo-1493568000180-ca2fb70ddcba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fEphY2tldHxlbnwwfHwwfHx8MA%3D%3D">
+    <h3>lacost</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Mini Bag - 12,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://i.pinimg.com/1200x/6e/3b/6c/6e3b6cff7af0c7e6445103d02f2bef5e.jpg">
+    <h3>lacost</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/d7/b4/ad/d7b4ad3d0283052d1aee248136149ec6.jpg">
+    <h3>lacost</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://i.pinimg.com/1200x/42/8d/fb/428dfb1e3d23fa5b022393a7c46199ac.jpg">
+    <h3>lacost</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Lacost- 12,000 RWF')">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://i.pinimg.com/1200x/fa/3e/3f/fa3e3f4915bbfb2d42be44f50dfbe46a.jpg">
+    <h3>lacost</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://i.pinimg.com/736x/19/1a/5e/191a5e950f92ba922a2d47853c9e8e3c.jpg">
+    <h3>lacost</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://i.pinimg.com/736x/10/f2/44/10f244c8b2e4b732037429bbb3be1f78.jpg">
+    <h3>lacost</h3>
+    <p>60,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://i.pinimg.com/1200x/4f/25/61/4f2561d585ebf8c128f57b37c7a1b498.jpg">
+    <h3>lacost</h3>
+    <p>50,000 RWF</p>
+    <button onclick="buy('Lacost- 12,000 RWF')">Buy Now</button>
+  </div>
+     <div class="card">
+    <img src="https://i.pinimg.com/1200x/07/fa/be/07fabee6d768dbbffe2b295f5bd03205.jpg">
+    <h3>lacost</h3>
+    <p>50,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+     <div class="card">
+    <img src="https://i.pinimg.com/1200x/dc/a5/95/dca595c70d6445480c7bca916bbca02a.jpg">
+    <h3>Lacost</h3>
+    <p>50,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+     <div class="card">
+    <img src="https://i.pinimg.com/1200x/99/f5/4a/99f54a88b45bceb1436945e15e8f5f12.jpg">
+    <h3>Box Bag</h3>
+    <p>50,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+  </div>
+     <div class="card">
+    <img src="https://i.pinimg.com/1200x/f8/33/8f/f8338fa9a8ce5a4ff42ec3e781069839.jpg">
+    <h3>seleman BAG</h3>
+    <p>50,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+</div>
+     <div class="card">
+    <img src="https://i.pinimg.com/1200x/b2/b0/37/b2b0373e606554b27c262210f75ea613.jpg">
+    <h3>CELINE BAG</h3>
+    <p>50,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+</div>
+ <div class="card">
+    <img src="https://i.pinimg.com/736x/e3/64/a8/e364a8d3be72d3f11579dd14d11c789a.jpg">
+    <h3>CELINE BAG</h3>
+    <p>50,000 RWF</p>
+    <button onclick="buy('Lacost - 12,000 RWF')">Buy Now</button>
+</div>
+</div>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div>
+      <h3>Nouvelle Rue</h3>
+      <p>Premium collections designed for style, durability, and everyday confidence.</p>
+    </div>
+
+    <div>
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="us.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li>📞 +250 796 910 102</li>
+        <li>📍 Rwanda</li>
+        <li>💬 WhatsApp Orders</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Nouvelle Rue Style Shop. All Rights Reserved. Designed by <a href="https://mingo-pro.edgeone.dev" target="_blank"> <span style="color:#be1a7f";>Chris</span><span style="color:#a4e43d";>tella</span>
+        </div>
+</footer>
+
+<script>
+function buy(item){
+  window.open(
+    "https://wa.me/250796910102?text=Ndashaka%20" + encodeURIComponent(item),
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>

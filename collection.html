@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="no.png" type="image/x-icon">
+  <title>Brands | Nouvelle Rue</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 60px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #777;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .brands-container {
+      max-width: 1100px;
+      margin: 0 auto 100px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 50px;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      border: 1px solid #eee;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      background: #fff;
+    }
+
+    .brand img {
+      max-width: 120px;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: all 0.4s ease;
+    }
+
+    .brand:hover {
+      border-color: #111;
+    }
+
+    .brand:hover img {
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #eee;
+      font-size: 13px;
+      color: #777;
+    }
+    a{
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="home.html"><h1>Brands</h1></a>
+    <p>Inspired by the Icons of Fashion</p>
+  </header>
+
+  <section class="brands-container">
+
+    <!-- Replace src with your own licensed logo files -->
+    <div class="brand">
+      <img src="https://i.pinimg.com/736x/a8/a1/61/a8a161226b498829b99c8f6858e513b4.jpg" alt="Gucci">
+    </div>
+
+    <div class="brand">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike">
+    </div>
+
+    <div class="brand">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Adidas">
+    </div>
+
+    <div class="brand">
+      <img src="https://i.pinimg.com/1200x/55/80/97/558097bf430af078a10fde2b3caf0806.jpg" alt="Prada">
+    </div>
+
+    <div class="brand">
+      <img src="https://i.pinimg.com/736x/26/9b/cd/269bcd3cf6bebc00a556e729acec1dd3.jpg" alt="Louis Vuitton">
+    </div>
+
+    <div class="brand">
+      <img src="https://i.pinimg.com/736x/0e/48/c6/0e48c637efbeaacac678ddb8cd48ae97.jpg" alt="Balenciaga">
+    </div>
+
+    <div class="brand">
+      <img src="no.png" alt="Nouvelle Rue">
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Nouvelle Rue. All Rights Reserved. Designed by <a href="<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="no.png" type="image/x-icon">
+  <title>Contact | Nouvelle Rue</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #ffffff;
+      color: #111;
+    }
+
+    header {
+      color: white;
+      background-color: #333;
+      text-align: center;
+      padding: 60px 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #777;
+      text-transform: uppercase;
+    }
+
+    .contact-container {
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .contact-info h2,
+    .contact-form h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .info-item {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    .info-item span {
+      font-weight: 500;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      font-family: inherit;
+      font-size: 14px;
+    }
+
+    form textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    form button {
+      background-color: #111;
+      color: #fff;
+      padding: 12px 30px;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background-color: #9b9b9b;
+    }
+
+    footer {
+        background-color: #2e2e2e;
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #eee;
+      font-size: 13px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="home.html"><h1>Nouvelle Rue</h1></a>
+    <p>Contact Us</p>
+  </header>
+
+  <section class="contact-container">
+    
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>
+        For inquiries about our collections, collaborations, or customer support,
+        please reach out using the form or contact details below.
+      </p>
+
+      <div class="info-item">
+        <span>Email</span>
+        ingabirechristella2@gmail.com
+      </div>
+
+      <div class="info-item">
+        <span>Phone</span>
+        +250 796 910 102
+      </div>
+
+      <div class="info-item">
+        <span>Location</span>
+        Kigali, Rwanda
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send a Message</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Nouvelle Rue. All Rights Reserved. Designed by  <span style="color:#be1a7f" <span style="color:white";>Mi</span><span style="color:orange";>ngo</span></a>
+        </div>
+</body>
+</html>

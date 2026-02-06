@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="no.png" type="image/x-icon">
+    <title>About Us Nouvelle Rue | STYLE COLLECTION</title>
+    
+    <!-- Importing Luxury Fonts --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- LUXURY THEME CSS --- */
+        
+        :root {
+            --black: #111111;
+            --dark-grey: #1f1f1f;
+            --gold: #D4AF37;       /* Classic Luxury Gold */
+            --gold-light: #f3e5ab;
+            --white: #ffffff;
+            --cream: #f9f8f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--white);
+            color: var(--black);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Typography Rules */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-weight: 300;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        img {
+            height: 540px;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .text-center { text-align: center; }
+        .gold-text { color: var(--gold); }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 1px solid var(--black);
+            color: var(--black);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            transition: all 0.4s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--black);
+            color: var(--gold);
+            border-color: var(--black);
+        }
+
+        /* 1. HERO SECTION - Full Screen */
+        .hero {
+            height: 90vh;
+            background-image: url('https://i.pinimg.com/1200x/9f/31/7c/9f317c42702b28ee11ca54da9239b58b.jpg'); /* High fashion boutique */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position:relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.4); /* Dark overlay */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .hero p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* 2. HERITAGE SECTION */
+        .heritage {
+            padding: 100px 0;
+            background-color: var(--cream);
+        }
+
+        .split-layout {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .heritage-text {
+            flex: 1;
+        }
+
+        .heritage-text h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: var(--black);
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background-color: var(--gold);
+            margin-bottom: 30px;
+        }
+
+        .heritage-img {
+            flex: 1;
+            height: 500px;
+        }
+
+        /* 3. BRANDS SECTION - Elegant List */
+        .brands {
+            padding: 80px 0;
+            background-color: var(--black);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .brands h3 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 50px;
+        }
+
+        .brand-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .brand-name {
+            font-family: 'Pacifico', serif;
+            font-size: 1.5rem;
+            color: #888;
+            transition: color 0.3s ease;
+            cursor: default;
+        }
+
+        .brand-name:hover {
+            color: var(--gold);
+        }
+
+        /* 4. CRAFTSMANSHIP - Dark Section */
+        .craft {
+            background-color: var(--dark-grey);
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .craft h2 {
+            color: var(--gold);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .craft p {
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 50px;
+        }
+
+        .gallery img {
+            height: 300px;
+            filter: grayscale(100%); /* Black and white for elegance */
+            transition: filter 0.5s ease;
+        }
+
+        .gallery img:hover {
+            filter: grayscale(0%);
+        }
+
+        /* 5. CONTACT CTA */
+        .contact-cta {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .contact-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--black);
+            color: #555;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.8rem;
+            border-top: 1px solid #333;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .split-layout { flex-direction: column; }
+            .heritage-img { height: 300px; width: 100%; }
+            .gallery { grid-template-columns: 1fr; }
+            .brand-list { flex-direction: column; gap: 20px; }
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-content">
+            <a href="home.html"><h1>Nouvelle Rue collection</h1></a>
+            <p>LUXURY BEST STYLE COLLECTION </p>
+        </div>
+    </header>
+
+    <!-- HERITAGE / OUR STORY -->
+    <section class="heritage">
+        <div class="container">
+            <div class="split-layout">
+                <div class="heritage-img">
+                    <img src="cristella.jpeg" alt="stela">
+                </div>
+                <div class="heritage-text">
+                    <div class="divider"></div>
+                    <h2>INGABIRE Chistella</h2>
+                    <p>Since 1985, Maison Luxe has served as a sanctuary for those who appreciate the finer things in life. We believe that true luxury is not merely about possession, but about the appreciation of artistry and history.</p>
+                    <p>From the ateliers of Paris to the workshops of Florence, we travel the world to source pieces that tell a story. Our collection represents a curated selection of the world’s most prestigious fashion houses.</p>
+                    <a href="#" class="btn">Read Our History</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRANDS WE CARRY -->
+    <section class="brands">
+        <div class="container">
+            <h3>Our Exclusive Partners</h3>
+            <div class="brand-list">
+                <span class="brand-name">CHANEL</span>
+                <span class="brand-name">HERMÈS</span>
+                <span class="brand-name">LOUIS VUITTON</span>
+                <span class="brand-name">DIOR</span>
+                <span class="brand-name">GUCCI</span>
+                <span class="brand-name">PRADA</span>
+                <span class="brand-name">BOTTEGA VENETA</span>
+                <span class="brand-name">SAINT LAURENT</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRAFTSMANSHIP -->
+    <section class="craft">
+        <div class="container">
+            <h2>The Art of Craftsmanship</h2>
+            <p>Every Nouvelle Rue in our collection is a masterpiece of engineering and design. We celebrate the artisans who dedicate hundreds of hours to a single piece.</p>
+            
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=600&q=80" alt="Leather stitching">
+                <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=600&q=80" alt="Gold hardware">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80" alt="Handbag interior">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <h2>Private Appointments</h2>
+            <p>Experience our collection in a private, personalized setting.</p>
+            <a href="#" class="btn">Book a Viewing</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Nouvelle Rue Style collection. All rights reserved. Designed by <span style="color:#be1a7f";>Chris</span><span style="color:#a4e43d";>tella</span>
+        </div>
+        </div>
+    </footer>
+
+</body>
+</html>

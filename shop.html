@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="no.png" type="image/x-icon">
+    <title>Clothing Selection | Nouvelle Rue</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #313131;
+        }
+
+        /* Big background image at the top */
+        .hero {
+            background-image: url('https://plus.unsplash.com/premium_photo-1661964205360-b0621b5a9366?q=80&w=1138&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            font-family: italic;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: -100px auto 0 auto; /* overlap hero */
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .card-content button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .card-content button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Modal for show more */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            background: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .modal-content button {
+            margin-top: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: wheat;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <a href="home.html">Your Clothes</a>
+    </div>
+
+    <div class="container">
+        <!-- Shirt Card -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Shirt">
+            <div class="card-content">
+                <h3>Shirt</h3>
+                <a href="shirt.html"><button>Show More</button></a>
+            </div>
+        </div>
+
+        <!-- Pants Card -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGFudHN8ZW58MHx8MHx8fDA%3D" alt="Pants">
+            <div class="card-content">
+                <h3>Pants</h3>
+                <a href="pants.html"><button>Show More</button></a>
+            </div>
+        </div>
+
+        <!-- Jacket Card -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1706765779494-2705542ebe74?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGphY2tldHN8ZW58MHx8MHx8fDA%3D" alt="Jacket">
+            <div class="card-content">
+                <h3>Jacket</h3>
+                <a href="jacket.html"><button>Show More</button></a>
+            </div>
+        </div>
+
+        <!-- Dress Card -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1529636273736-fc88b31ea9d9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGRyZXNzfGVufDB8fDB8fHww" alt="Dress">
+            <div class="card-content">
+                <h3>Dress</h3>
+                <a href="dress.html"><button>Show More</button></a>
+            </div>
+        </div>
+
+        <!-- Shoes Card -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c2hvZXN8ZW58MHx8MHx8fDA%3D" alt="Shoes">
+            <div class="card-content">
+                <h3>Shoes</h3>
+                <a href="shoes.html"><button>Show More</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modalText">
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function showMore(text) {
+            const modal = document.getElementById('modal');
+            const modalText = document.getElementById('modalText');
+            modalText.innerHTML = `<p>${text}</p><button onclick="closeModal()">Close</button>`;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

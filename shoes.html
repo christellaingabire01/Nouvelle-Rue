@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nouvelle Rue | shoes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="no.png" type="image/x-icon">
+
+<style>
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Montserrat', Arial, sans-serif;
+}
+
+/* BODY */
+body{
+  background:#fff;
+  color:#111;
+}
+
+/* NAVBAR */
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(177, 186, 185, 0.484);
+  backdrop-filter:blur(8px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 40px;
+  border-bottom:1px solid #eee;
+}
+
+nav h2{
+  font-family:'Playfair Display', serif;
+  letter-spacing:2px;
+  font-size:22px;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
+
+nav ul li a{
+  color:#111;
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  position:relative;
+}
+
+nav ul li a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:1px;
+  background:#111;
+  transition:.3s;
+}
+
+nav ul li a:hover::after{
+  width:100%;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(to right,#c3c3c3,#333333);
+  color:#fff;
+  text-align:center;
+  padding:90px 20px;
+}
+
+header h1{
+  font-family:'Playfair Display', serif;
+  font-size:46px;
+  letter-spacing:3px;
+  margin-bottom:12px;
+}
+
+header p{
+  font-size:14px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  opacity:.9;
+}
+
+/* PRODUCTS */
+.products{
+  max-width:1300px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:35px;
+  padding:80px 40px;
+}
+
+/* PRODUCT CARD */
+.card{
+  background:#fff;
+  border-radius:16px;
+  padding:16px;
+  text-align:center;
+  position:relative;
+  box-shadow:0 12px 40px rgba(0,0,0,.12);
+  transition:.4s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 50px rgba(0,0,0,.18);
+}
+
+.card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.card h3{
+  margin:16px 0 6px;
+  font-size:16px;
+  font-weight:600;
+}
+
+.card p{
+  font-size:15px;
+  font-weight:600;
+  color:#222;
+}
+
+/* BUTTON */
+button{
+  margin-top:14px;
+  background:#111;
+  color:#fff;
+  border:none;
+  padding:12px 26px;
+  border-radius:40px;
+  font-size:12px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  background:#333;
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:#ccc;
+  padding:70px 30px;
+}
+
+.footer-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+}
+
+footer h3{
+  color:#fff;
+  margin-bottom:16px;
+  font-size:16px;
+}
+
+footer ul{
+  list-style:none;
+}
+
+footer ul li{
+  margin-bottom:10px;
+}
+
+footer ul li a{
+  color:#ccc;
+  text-decoration:none;
+  font-size:14px;
+}
+
+footer ul li a:hover{
+  color:#fff;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:50px;
+  font-size:13px;
+  color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <h2>Nouvelle Rue</h2>
+  <ul>
+     <li><a href="home.html">Home</a></li>
+     <li><a href="us.html">About</a></li>
+     <li><a href="shop.html">Shop</a></li>
+     <li><a href="contact.html">contact</a></li>
+     <li><a href="collection.html">Brand</a></li>
+  </ul>
+
+</nav>
+
+<!-- HERO -->
+<header>
+  <h1>SHOES COLLECTION</h1>
+  <p>Fashion • Quality • Confidence</p>
+</header>
+
+<!-- PRODUCTS -->
+<div class="products">
+
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/e0/ca/b5/e0cab5e81540a8c632ba0816ca88a543.jpg">
+    <h3>New Balance</h3>
+    <p>30,000 RWF</p>
+    <button onclick="buy('New Balance - 30,000 RWF ')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/45/9f/ab/459fab5e7b66f2cc247f8a13b838f92b.jpg">
+    <h3>New Balance</h3>
+    <p>35,000 RWF</p>
+    <button onclick="buy('New Balance - 35,000 RWF')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/7e/55/4d/7e554d755367a6550d67f530a0435c66.jpg">
+    <h3>Samba</h3>
+    <p>25,000 RWF</p>
+    <button onclick="buy('Samba - 25,000 RWF')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/c4/af/78/c4af78e68f510bf885f1df7859998287.jpg">
+    <h3>Adidas</h3>
+    <p>20,000 RWF</p>
+    <button onclick="buy('Adidas - 20,000 RWF')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/7f/e9/77/7fe977aeec6eba99869805aa1965096f.jpg">
+    <h3>Puma</h3>
+    <p>25,000 RWF</p>
+    <button onclick="buy('Puma - 25,000 RWF')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/74/87/74/7487741287077d1d33afea091cfb3dc2.jpg">
+    <h3>Nike</h3>
+    <p>20,000 RWF</p>
+    <button onclick="buy('Nike - 20,000 RWF')">Buy Now</button>
+  </div>
+<div class="card">
+    <img src="https://i.pinimg.com/736x/c8/dc/f3/c8dcf3faebc2b8d0a118c3d5965b8d3f.jpg">
+<h3>Alexander mcqueen</h3>
+    <p>25,000 RWF</p>
+    <button onclick="buy('Alexander mcqueen - 25,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://i.pinimg.com/1200x/c2/0d/c2/c20dc24e946e42128e258f7c406f9463.jpg">
+    <h3>Converse</h3>
+    <p>25,000 RWF</p>
+    <button onclick="buy('Converse - 25,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/82/7f/11/827f1143d43652a25fc0ec4b21f03207.jpg">
+    <h3>Converse</h3>
+    <p>25,000 RWF</p>
+    <button onclick="buy('Converse - 25,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://i.pinimg.com/1200x/9f/a2/6a/9fa26a1d561541baecd471595d29b0ab.jpg">
+    <h3></h3>
+    <p>20,000 RWF</p>
+    <button onclick="buy('Shoes - 20,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://i.pinimg.com/1200x/83/8c/56/838c5686e099e4416d9217306ebd30dc.jpg">
+    <h3>Shoes</h3>
+    <p>25,000 RWF</p>
+    <button onclick="buy('Shoes - 25,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/b3/c9/a7/b3c9a7b78fa85f937b99266e4c1660c3.jpg">
+    <h3>Shoes</h3>
+    <p>20,000 RWF</p>
+    <button onclick="buy('Shoes - 20,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://i.pinimg.com/1200x/d6/11/62/d61162dde1527d0b51ade0b00c46f114.jpg">
+    <h3>Shoes</h3>
+    <p>30,000 RWF</p>
+    <button onclick="buy('Shoes - 30,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/f6/f1/45/f6f1453dbbb81a4035bbb1cc16f203b6.jpg">
+    <h3>Shoes</h3>
+    <p>35,000 RWF</p>
+    <button onclick="buy('Shoes - 35,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/53/39/10/53391047bfd3bf0a3992e44d3303cc4b.jpg">
+    <h3>Shoes</h3>
+    <p>30,000 RWF</p>
+    <button onclick="buy('Mini Bag - 30,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/03/68/08/036808f50e0dc0bca1dba721638c43cb.jpg">
+    <h3>Shoes</h3>
+    <p>20,000 RWF</p>
+    <button onclick="buy('Shoes - 20,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/6a/1a/f6/6a1af68392ac9c73a5d7bfbf8db59fdb.jpg">
+    <h3>Shoes</h3>
+    <p>25,000 RWF</p>
+    <button onclick="buy('Mini Bag - 25,000 RWF')">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://i.pinimg.com/1200x/8c/41/8e/8c418e7940b86a2a7cda8f564ecce4f6.jpg">
+    <h3>Shoes</h3>
+    <p>20,000 RWF</p>
+    <button onclick="buy('Shoes - 20,000 RWF')">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://i.pinimg.com/736x/2a/ed/a5/2aeda52792bdd6390a72712641c5ca05.jpg">
+    <h3>Shoes</h3>
+    <p>25,000 RWF</p>
+    <button onclick="buy('Mini Bag - 25,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/e3/72/2f/e3722f4efbb14cb1c7a9a85f0bb8e0eb.jpg">
+    <h3>Shoes</h3>
+    <p>12,000 RWF</p>
+    <button onclick="buy('Shoes - 35,000 RWF')">Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://i.pinimg.com/1200x/a8/a8/e4/a8a8e4aa38d9c7051414732d1123068d.jpg">
+    <h3>Shoes</h3>
+    <p>30,000 RWF</p>
+    <button onclick="buy('Shoes - 30,000 RWF')">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://i.pinimg.com/1200x/a5/8a/79/a58a79b99691f50eb715d4068baf566f.jpg">
+    <h3>Shoes</h3>
+    <p>25,000 RWF</p>
+    <button onclick="buy('Shoes - 25,000 RWF')">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://i.pinimg.com/1200x/5a/ed/27/5aed270c266298e9d08672bc4f368f6a.jpg">
+    <h3>Shoes</h3>
+    <p>20,000 RWF</p>
+    <button onclick="buy('Shoes - 20,000 RWF')">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://i.pinimg.com/736x/f3/ae/04/f3ae04694720b4b24fe470e53b736355.jpg">
+    <h3>Shoes</h3>
+    <p>35,000 RWF</p>
+    <button onclick="buy('Shoes - 35,000 RWF')">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://i.pinimg.com/1200x/d7/6c/5f/d76c5fafcde51ca728329a924d072336.jpg">
+    <h3>Shoes</h3>
+    <p>30,000 RWF</p>
+    <button onclick="buy('Shoes - 30,000 RWF')">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://i.pinimg.com/736x/0b/5c/45/0b5c454dcccea40da26373f6b9c5aefa.jpg">
+    <h3>Shoes</h3>
+    <p>40,000 RWF</p>
+    <button onclick="buy('Shoes - 40,000 RWF')">Buy Now</button>
+  </div>
+     <div class="card">
+    <img src="https://i.pinimg.com/736x/7f/8b/bf/7f8bbfea407f19c9aabca469b55c606b.jpg">
+    <h3>Shoes</h3>
+    <p>35,000 RWF</p>
+    <button onclick="buy('Shoes - 35,000 RWF')">Buy Now</button>
+  </div>
+     <div class="card">
+    <img src="https://i.pinimg.com/736x/b1/5b/80/b15b80a7dd45f0481dd17a91cdbf0b9e.jpg">
+    <h3>Shoes</h3>
+    <p>25,000 RWF</p>
+    <button onclick="buy('Shoes - 25,000 RWF')">Buy Now</button>
+  </div>
+     <div class="card">
+    <img src="https://i.pinimg.com/1200x/5e/8b/3a/5e8b3aae0e5b544f3b2ec9df79cd7cb5.jpg">
+    <h3>Shoes</h3>
+    <p>45,000 RWF</p>
+    <button onclick="buy('Shoes - 45,000 RWF')">Buy Now</button>
+  </div>
+     <div class="card">
+    <img src="https://i.pinimg.com/736x/db/f6/97/dbf69768c1f1a27c46cbb7cd295beebb.jpg">
+    <h3>Shoes</h3>
+    <p>30,000 RWF</p>
+    <button onclick="buy('Shoes - 30,000 RWF')">Buy Now</button>
+</div>
+     <div class="card">
+    <img src="https://i.pinimg.com/1200x/04/76/5b/04765b898c9d42b58d98cf39252f4bcb.jpg">
+    <h3>Shoes</h3>
+    <p>40,000 RWF</p>
+    <button onclick="buy('Shoes - 40,000 RWF')">Buy Now</button>
+</div>
+ <div class="card">
+    <img src="https://i.pinimg.com/1200x/38/8b/50/388b5029f5ba90a80fb252fbc9d6028b.jpg">
+    <h3>Shoes</h3>
+    <p>50,000 RWF</p>
+    <button onclick="buy('Shoes - 50,000 RWF')">Buy Now</button>
+</div>
+</div>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div>
+      <h3>Nouvelle Rue</h3>
+      <p>Premium collections designed for style, durability, and everyday confidence.</p>
+    </div>
+
+    <div>
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="us.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li>📞 +250 796 910 102</li>
+        <li>📍 Rwanda</li>
+        <li>💬 WhatsApp Orders</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Nouvelle Rue Style Shop. All Rights Reserved. Designed by <a href="https://mingo-pro.edgeone.dev" target="_blank"><span style="color: #777;">Mi</span><span style="color: orange;">ngo</span></a>
+  </div>
+</footer>
+
+<script>
+function buy(item){
+  window.open(
+    "https://wa.me/250796910102?text=Ndashaka%20" + encodeURIComponent(item),
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>
